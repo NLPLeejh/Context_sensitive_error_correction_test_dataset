@@ -36,17 +36,17 @@
 
 <br>
 
-- 오류 기준은 편집거리, 입력과정에서 입력 오류 유혈(키보드 입력 오류 범위, 반복 입력, 누락 등) 등을 고려하였습니다.
+- 오류 기준은 편집거리, 입력과정에서 입력 오류 유형(키보드 입력 오류 범위, 반복 입력, 누락 등) 등을 고려하였습니다.
 
 <br>
 
 
-|오류 유형|예|설명|
-|:--:|:--:|:--|
+|오류 유형| <h6> 예 <br> (원본단어 / 오류어) </h6> |  설명  |
+|:---:|:------------:|---|
 |입력 누락|major / maor|사용자가 알파벳 입력을 누락한 경우입니다.|
 |오류 알파벳 추가 입력|this / thjis|사용자가 단어에서 입력 할 알파벳 이외의 입력을 한 경우입니다. 대부분 오류 알파벳의 등장 좌/우의 알파벳 주위 키보드에서 나타날 확률이 높습니다.|
 |반복 입력|operation / opperation|사용자가 입력을 실수로 연속으로 두번 한 경우입니다.|
-|반복 누락 입력|succeeded / succeded|사용자가 두번 입력될 알파벳을 누락하고 한번 입력한 경우입니다.|
+|반복 누락 <br> 입력|succeeded / succeded|사용자가 두번 입력될 알파벳을 누락하고 한번 입력한 경우입니다.|
 |입력 오류|continue / continur|사용자가 알파벳을 잘 못 입력하는 경우입니다. 대부분 원본 알파벳의 주변 키보드를 잘 못 입력할 확률이 높습니다.|
 |알파벳 입력 순서 오류|atlanta / altanta|연속으로 입력되는 알파벳의 순서가 사용자의 실수에 의해서 바뀌는 경우입니다.|
 |복합 오류|payed / paid|위의 모든 유형이 복합적으로 나타나는 경우입니다. 단어의 알파벳의 수가 적고 복합오류가 한 단어에서 다양할수록 원본단어를 유추하기가 매우 힘듭니다.|
@@ -78,11 +78,15 @@
 <br><br>
 
 
-## <b>문서 형식</b>
+## <b>문서 배포 정보</b>
 
 <br>
 
-
+|배포 파일명|설명|
+|:--:|--|
+|[50k_errorWord](http://pnuailab.synology.me/sharing/VNUTOGQbT)|5만개의 오류어 생성 테스트 데이터 (단순철자오류 + 문맥의존 철자오류)|
+|[100k_errorWord](http://pnuailab.synology.me/sharing/YY2sweTER)|10만개의 오류어 생성 테스트 데이터 (단순철자오류 + 문맥의존 철자오류)|
+|[200k_errorWord](http://pnuailab.synology.me/sharing/U80rx9icT)|20만개의 오류어 생성 테스트 데이터 (단순철자오류 + 문맥의존 철자오류)|
 
 <br><br>
 
@@ -96,7 +100,7 @@
 
 <br>
 
-|시스템 이름|정확도(precision)|재현율(recall)|
+|시스템 명|정확도(precision)|재현율(recall)|
 |:--:|--:|--:|
 |grammarly <br> ( https://www.grammarly.com/ )|86%|40%|
 |MS Word|82%|27%|
@@ -108,8 +112,6 @@
 
 <br>
 
-```
 - Google web 1T : https://catalog.ldc.upenn.edu/LDC2006T13
 - 브라운 말뭉치 : https://en.wikipedia.org/wiki/Brown_Corpus
 - Neuspell : https://arxiv.org/abs/2010.11085
-```
